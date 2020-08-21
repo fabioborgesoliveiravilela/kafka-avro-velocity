@@ -1,0 +1,17 @@
+#set($metadado = $goMessage.metadado)
+#set($header = $goMessage.header)
+#set($mensagem = $goMessage.mensagem)
+
+<DOC>
+  <Metadado>
+    <Tipo>$metadado.tipo</Tipo>
+	<Versao>$metadado.versao</Versao>
+  </Metadado>
+  <Header>
+    <CodMsg>$header.codMsg</CodMsg>
+    <NumSeq>$header.numSeq</NumSeq>
+  </Header>
+  <Mensagem>
+    <NumCtrlIF>$mensagem.numCtrlIF</NumCtrlIF>
+  </Mensagem>
+</DOC>

@@ -1,0 +1,18 @@
+#set($metadado = $backMessage.metadado)
+#set($header = $backMessage.header)
+#set($mensagem = $backMessage.mensagem)
+
+{
+	"metadado": {
+		"tipo" : "$metadado.tipo",
+		"versao" : "$metadado.versao"
+	},
+	"header": {
+		"codMsg" : "$header.codMsg",
+		"numSeq" : $header.numSeq
+	},
+	"mensagem": {
+		"numCtrlIF" : "$mensagem.numCtrlIF",
+		"sitOpSEL" : "$mensagem.sitOpSEL"
+	}
+}

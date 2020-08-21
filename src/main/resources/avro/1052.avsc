@@ -1,0 +1,61 @@
+{
+	"namespace": "io.confluent.developer.avro.in",
+  	"type": "record",
+  	"name": "SEL1052",
+  	"fields": [
+    	{
+    		"name": "metadado",
+    	    "type": {
+      				"namespace": "io.confluent.developer.avro.in",
+	      			"type": "record",
+	      			"name": "Metadado",
+		      		"fields": [
+		      			{
+			      			"name": "tipo",
+			      			"type": "string",
+			      			"avro.java.string": "String"
+			    		},
+		      			{
+			      			"name": "versao",
+			      			"type": "string",
+			      			"avro.java.string": "String"
+			    		}
+		      		]
+    	    }
+    	},
+    	{
+    		"name": "header",
+    	    "type": {
+      				"namespace": "io.confluent.developer.avro.in",
+	      			"type": "record",
+	      			"name": "Header",
+		      		"fields": [
+		      			{
+			      			"name": "codMsg",
+			      			"type": "string",
+			      			"avro.java.string": "String"
+			    		},
+		      			{
+			      			"name": "numSeq",
+			      			"type": "int"
+			    		}
+		      		]
+    	    }
+    	},
+    	{
+    		"name": "mensagem",
+    	    "type": {
+      				"namespace": "io.confluent.developer.avro.in",
+	      			"type": "record",
+	      			"name": "Mensagem",
+		      		"fields": [
+		      			{
+			      			"name": "numCtrlIF",
+			      			"type": "string",
+			      			"avro.java.string": "String"
+			    		}
+		      		]
+    	    }
+    	}
+  	]
+}

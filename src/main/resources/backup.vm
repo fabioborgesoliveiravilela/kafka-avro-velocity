@@ -1,0 +1,20 @@
+#macro(nodeValue $parent, $child)$parent.getChild($child).getText()#end
+
+#set($Metadado = $backMessage.getChild("Metadado"))
+#set($Header = $backMessage.getChild("Header"))
+#set($Mensagem = $backMessage.getChild("Mensagem"))
+
+{
+	"metadado": {
+		"tipo" : "#nodeValue($Metadado, "Tipo")",
+		"versao" : "#nodeValue($Metadado, "Versao")"
+	},
+	"header": {
+		"codMsg" : "#nodeValue($Header, "CodMsg")",
+		"numSeq" : "$goMessage.Header.NumSeq",
+	},
+	"mensagem": {
+		"numCtrlIF" : "#nodeValue($Mensagem, "NumCtrlIF")"",
+		"sitOpSEL" : "#nodeValue($Mensagem, "SitOpSEL")""
+	}
+}
